@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dofla</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: roboto, sans-serif, Arial, Helvetica;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 0.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .message {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .button-container {
+            margin-top: 2rem;
+        }
+
+        .button {
+            background: #007bff;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            background: radial-gradient(circle, #007bff 60%, #0056b3 100%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+
+        .photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s, pop-up 3s;
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+            transition: transform 1s ease-in-out;
+        }
+
+        .photo:hover {
+            transform: scale(1.5) translateY(-10%);
+        }
+
+        @keyframes pop-up {
+
+            0%,
+            60% {
+                transform: scale(1.5) translateY(-10%);
+            }
+
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-20vh);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .message {
+                font-size: 1rem;
+            }
+
+            .button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="balloons">
+        <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="balloon" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="balloon" style="left: 70%; animation-delay: 1s;"></div>
+        <div class="balloon" style="left: 90%; animation-delay: 3s;"></div>
+    </div>
+
+    <h1>🎉 Happy Birthday! 🎉</h1>
+    <h2>To My Dofla</h2>
+    <p class="message">Many Many Happy returns of the
+        day. Wishing you a day filled with love, laughter, and endless joy. </p>
+    <div class="photo-gallery">
+        <div class="photo" style="background-image: url('./images/dhopla-compressed.jpg');"></div>
+    </div>
+
+    <div class="button-container">
+        <button class="button" onclick="alert('Happy Birthday! Have an amazing year ahead! 🎂')">Send Love 💌</button>
+    </div>
+</body>
+
+</html>
